@@ -1,6 +1,15 @@
 # MAC Bad
 DS_Store
 
+# Ignore JS hint
+.jshintrc
+
+# Personal notes
+notes.js
+
+# Personal README notes
+README-for-use.md
+
 # Logs
 logs
 *.log
