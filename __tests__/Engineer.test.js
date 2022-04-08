@@ -2,6 +2,8 @@
 // Test to verify the right kind of input is recieved
 // Test to verify properties are inherited from Employee class
 
+// import {jest} from '@jest/globals';
+
 const Engineer = require('../lib/Engineer')
 jest.mock('../lib/Employee')
 
