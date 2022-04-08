@@ -12,18 +12,19 @@ test('creaetes an engineer object', () => {
     const engineer = new Engineer('Steve');
 
     expect(engineer.name).toBe('Steve');
-    expect(engineer.id).toBe(expect.any(Number));
-    expect(engineer.email).toBe(expect.any(string));
-    expect(engineer.github).toBe(expect.any(string));
+    expect(engineer.id).toEqual(expect.any(Number));
+    expect(engineer.email).toEqual(expect.any(String));
+    expect(engineer.github).toEqual(expect.any(String));
 });
 
 test('sets engineer github to user provided value', () => {
-    const engineer = new Engineer;
+    const engineer = new Engineer();
     const github = 'github';
 
-    expect(engineer.github).toBe(expect('https://github.com/octocat'))
+    expect(engineer.github).toEqual(expect('https://github.com/octocat'))
 });
 
 test("getRole () returns 'Engineer' ", () => {
-    expect (this.role).toBe('Engineer');
+    const engineer = new Engineer();
+    expect (this.role).toEqual('Engineer');
 });
