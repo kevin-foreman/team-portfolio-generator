@@ -1,15 +1,16 @@
 // Need all the dependencies here
 
 
-const { writeFile, copyFile } = require('./utils/generate-site.js');
 const inquirer = require('inquirer');
-const generatePage = require('./src/page-template');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 
 
 // question prompts (format from inquirer)
 const promptUser = () => {
-    return inquirer.prompt([
+    inquirer.prompt([
         {
             type: 'input',
             name: 'name',
@@ -39,7 +40,7 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'manager-email',
-            message: `Please enter the team manager's email (required)`,
+            message: `Please enter the team manager's email address (required)`,
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -52,26 +53,26 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'office-number',
-            message: `Please enter the team manager's phone number`,
+            message: `Please enter the team manager's office number`,
             validate: nameInput => {
                 if (nameInput) {
                     return true;
                 } else {
-                    console.log('Please enter the phone number');
+                    console.log('Please enter a phone number');
                     return false;
                 }
             }
         },
         {
             type: 'confirm',
-            name: 'confirmEngineer',
+            name: 'confirm-engineer',
             message: 'Would you like to enter information for an engineer?',
             default: true
         },
         {
             type: 'input',
-            name: 'about',
-            message: 'Provide some information about the Engineer:',
+            name: 'name',
+            message: 'What is the name of the Engineer?',
             when: ({ confirmAbout }) => {
                 if (confirmAbout) {
                     return true;
@@ -82,3 +83,5 @@ const promptUser = () => {
         }
     ]);
 };
+
+module.exports = index;
