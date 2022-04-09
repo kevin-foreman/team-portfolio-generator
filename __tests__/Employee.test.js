@@ -3,7 +3,7 @@
 jest.mock('../lib/Employee');
 
 
-const Employee = require('../lib/Employee');
+const employee = require('../lib/Employee');
 const { expect } = require('@jest/globals');
 
 
