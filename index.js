@@ -1,3 +1,3 @@
-const Team = require('./lib/Team');
+const Team = require('./lib/team-app');
 
 new Team().buildTeam();
