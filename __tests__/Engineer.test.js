@@ -25,7 +25,7 @@ test('creaetes an engineer object', () => {
 test('getGithub() returns github from user provided value', () => {
     const engineer = new Engineer('Steve', 4567, 'mail@mail.mail', 'Engineer', 'github.com');
 
-    expect(engineer.getGithub()).toEqual(expect.any(Object));
+    expect(engineer.getGithub()).toEqual(expect.any(String));
 });
 
 test("getRole() returns 'Engineer' ", () => {
