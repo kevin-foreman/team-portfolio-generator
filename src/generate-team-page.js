@@ -1,3 +1,9 @@
+// use template literals for the Employee generator functions
+// each employee class will have individual sections to be scalable
+
+// Manager class generate function
+
+
 module.exports = teamTemplateData => {
 
     const { team } = TeamData;
