@@ -174,30 +174,61 @@ const addEmployee = () => {
             message: 'Do you want to add more team members?',
             default: false
         }
-])
-// after all the information has been captured, print the captured array to the base html
-.then(employeeData => {
+    ])
 
-    const { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
-    const employee;
+    // after all the information has been captured, get captured information into the empty array
+    .then(employeeData => {
 
-    if (role === "Engineer") {
-        employee = new Engineer (name, id, email, github);
-        console.log(employee);
+        const { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
+        let employee;
 
-    }
-})
+        if (role === "Engineer") {
+
+            employee = new Engineer (name, id, email, github);
+            console.log(Engineer);
+
+        } else if (role === "Intern") {
+            employee = new Intern (name, id, email, school);
+            console.log(Intern);
+        }
+
+        teamMemberArray.push(employee);
+        // allow the addition of team members to continue as many times as necessary
+
+        if (confirmAddEmployee) {
+            return addEmployee(teamMemberArray);
+
+        } else {
+            return teamMemberArray;
+        }
+    })
+};
+
+// Write the captured data to an html file
+// send it to the same file as the css so the link works
+
+
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("Team portfolio has been created. Grab the 'index.html' in the ./dist folder")
+        }
+    })
+};
 
 promptUser();
-
-// call promptUser
-
-// promptUser()
-//         .then(addEmployee)
-//         .then(teamMemberArray => {
-//             return generateHTML(teamMemberArray);
-//         })
-//         // using fs to write the file
-//         .then(pageHTML => {
-//             return fs.writeFile(pageHTML);
-//         })
+    .then(addEmployee)
+    .then(teamMemberArray => {
+        return generateHTML(teamMemberArray);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+// final catch
+    .catch(err => {
+        console.log(err);
+    });
