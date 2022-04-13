@@ -101,7 +101,7 @@ const addEmployee = () => {
         {
             type: 'input',
             name: 'name',
-            message: "What is $({role.choice} + 's) name?",
+            message: "What is employee's name?",
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -205,7 +205,7 @@ const addEmployee = () => {
 };
 
 // Write the captured data to an html file
-// send it to the same file as the css so the link works
+// send it to the same file as the css so the link to the styling works
 
 
 const writeFile = data => {
@@ -230,5 +230,8 @@ promptUser()
     })
 // final catch
     .catch(err => {
-        console.log(err);
+        if (err) [
+            console.log(err)
+        ]
+
     });
