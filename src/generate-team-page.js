@@ -71,21 +71,32 @@ generateHTML = (data) => {
         const role = employee.getRole();
 
         // Manager piece
-        if
+        if (role === 'Manager') {
+
+            const managerObject = generateManager(employee);
+            pageArray.push(managerObject);
+        }
 
         // Engineer piece
-        if
+        if (role === 'Engineer') {
 
+            const engineerObject = generateEngineer(employee);
+            pageArray.push(engineerObject);
+        }
 
         // Intern piece
-    }
+        if (role === 'Intern') {
 
+            const internObject = generateIntern(employee);
+            pageArray.push(internObject);
+        }
+    }
     const employeeSections = pageArray.join('')
 
     const generatePortfolio = generateTeamPortfolio(employeeSections)
     return generatePortfolio;
-}
 
+}
 // Final piece using a template literal to set the base template for the html file
 
 const generateTeamPortfolio = function (employeeSections) {
@@ -100,7 +111,7 @@ const generateTeamPortfolio = function (employeeSections) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Public+Sans&family=Staatliches&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Public+Sans&family=Staatliches&display=swap">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
@@ -111,11 +122,23 @@ const generateTeamPortfolio = function (employeeSections) {
                 <span class ="navbar-brand mb-0 h1 w-100 text-center" id="navbar-text">Team Portfolio</span>
             </nav>
         </header>
+        <main>
+            <div class="row justify-content-center" id="team-objects">
+
+                <!-- Team Member Objects -->
+                ${employeeSections}
+
+            </div>
+        </div>
+        </main>
+
+    </body>
         
         
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </html>
 `;
-}
+};
+
 module.exports = generateHTML;
