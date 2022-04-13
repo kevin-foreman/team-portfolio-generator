@@ -6,7 +6,7 @@
 const Engineer = require('../lib/Engineer');
 const { expect } = require('@jest/globals');
 
-// jest.mock('../lib/Employee');
+jest.mock('../lib/Employee');
 
 
 
