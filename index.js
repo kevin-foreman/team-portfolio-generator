@@ -220,7 +220,7 @@ const writeFile = data => {
     })
 };
 
-promptUser();
+promptUser()
     .then(addEmployee)
     .then(teamMemberArray => {
         return generateHTML(teamMemberArray);
