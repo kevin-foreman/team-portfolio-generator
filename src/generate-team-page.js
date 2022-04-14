@@ -62,7 +62,7 @@ const generateIntern = function (intern) {
                     <h4>Role: ${intern.role}</h4><i class="material-icons">supervised_user_circle</i>
                     <div class="mt-5">
                         <div class="mt-3"> <span class="text1">Employee ID: ${intern.id}</span></div>
-                        <span class="text2">School: ${intern.currentSchool}</span>
+                        <span class="text2">School: ${intern.school}</span>
                         <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
                     </div>
                 </div>
