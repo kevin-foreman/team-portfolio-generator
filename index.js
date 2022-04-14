@@ -53,6 +53,14 @@ const promptUser = () => {
             name: 'email',
             message: `Please enter the team manager's email address (required)`,
             validate: email => {
+
+                // note: I did find a potential vulnerability while using this method
+                // to validate an email input.
+                // if the user enters a long email that happens to meet the 
+                // validation criteria, but is not an actual email address,
+                // this validation method could freeze the user's browser.
+                // use with caution.
+
                 valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
                 if (valid) {
                     return true;
@@ -64,10 +72,10 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'office-number',
+            name: 'officeNumber',
             message: `Please enter the team manager's office number`,
             validate: nameInput => {
-                if (nameInput === null) {
+                if (nameInput === undefined) {
                     console.log('Please enter a phone number');
                     return false;
                 } else {
@@ -77,7 +85,8 @@ const promptUser = () => {
                 }
         },
 ])
-     // use a push to get all the answers
+     // use a push to get all the manager's answers
+     // and create an instance of a manager
     .then(managerInfo => {
         const { name, id, email, officeNumber } = managerInfo;
         const manager = new Manager (name, id, email, officeNumber);

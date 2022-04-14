@@ -11,18 +11,14 @@
     <div class="row">
         <div class="card col-md-4">
             <div class="p-3 mb-3" style="max-width: 18rem;">
-                <div class="d-flex justify-content-between">
                     <div class="d-flex flex-row align-items-center">
                         <div class="ms-2 c-details">
                         </div>
                             </div>
-                                </div>
                 <div class="mt-5">
                     <h3 class="heading">${manager.name}</h3>
                     <h4>Manager</h4><i class="material-icons">content_paste</i>
                     <div class="mt-5">
-                        <div class="progress">
-                        </div>
                         <div class="mt-3"> <span class="text1">Employee ID: ${manager.id}</span></div>
                         <span class="text2">Office #: ${manager.officeNumber}</span>
                         <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
@@ -50,12 +46,10 @@ const generateEngineer = function (engineer) {
                                 </div>
                 <div class="mt-5">
                     <h3 class="heading">${engineer.name}</h3>
-                    <h4>Engineer</h4><i class="material-icons">content_paste</i>
+                    <h4>Engineer</h4><i class="material-icons">logo_dev</i>
                     <div class="mt-5">
-                        <div class="progress">
-                        </div>
                         <div class="mt-3"> <span class="text1">Employee ID: ${engineer.id}</span></div>
-                        <span class="text2">Github: <a href="https://github.com/${engineer.github}"></a></span>
+                        <span class="text2">Github: <a href='https://github.com/${engineer.github}' ${engineer.github} target="_blank"></a></span>
                         <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
                     </div>
                 </div>
@@ -80,10 +74,8 @@ const generateIntern = function (intern) {
                                 </div>
                 <div class="mt-5">
                     <h3 class="heading">${intern.name}</h3>
-                    <h4>Intern</h4><i class="material-icons">content_paste</i>
+                    <h4>Intern</h4><i class="material-icons">supervised_user_circle</i>
                     <div class="mt-5">
-                        <div class="progress">
-                        </div>
                         <div class="mt-3"> <span class="text1">Employee ID: ${intern.id}</span></div>
                         <span class="text2">School: ${intern.school}</span>
                         <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
@@ -148,7 +140,7 @@ const generateTeamPortfolio = function (employeeSections) {
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Public+Sans&family=Staatliches&display=swap">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+        <link rel="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap-grid.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
@@ -169,7 +161,7 @@ const generateTeamPortfolio = function (employeeSections) {
 
     </body>
         
-        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></scripts>        
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 </html>

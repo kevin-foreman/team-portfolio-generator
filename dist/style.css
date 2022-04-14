@@ -18,8 +18,24 @@ body {
 }
 
 #border {
-    border-style: solid;
+    border: none;
     max-width: 18rem;
+}
+
+#team-objects {
+    max-height: 200px;
+    max-width: 400px;
+    display: flexbox;
+    display: table-row;
+}
+
+.email {
+    font-size:small;
+}
+
+#row {
+    display: flexbox;
+    justify-content: center;
 }
 
 .card {
@@ -30,6 +46,7 @@ body {
 .c-details span {
     font-weight: 300;
     font-size: 13px
+    
 }
 
 .text1 {
@@ -39,6 +56,11 @@ body {
 
 .text2 {
     color: black;
+}
+
+.row {
+    display: inline-flex;
+    justify-content: center;
 }
 
 /* Extra small devices (phones, 600px and down) */
