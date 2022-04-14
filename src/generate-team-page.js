@@ -7,56 +7,92 @@
     // Only one manager is required for the team
     const generateManager = function (manager) {
     return `
-    <div class ="col-md-4 col-sm-6 mt-4">
-        <div class="card h-100">
-            <div class="card-header">
-                <h3>${manager.name}</h3>
-                <h4>Manager</h4><i class="material-icons">content_paste</i>
-            </div>
-            <div class="card-body">
-                <p class="id">ID: ${manager.id}</p>
-                <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
-                <p class="office">Office Number: ${manager.officeNumber}</p>
+<div class="container mt-5 mb-3" id="border">
+    <div class="row">
+        <div class="card col-md-4">
+            <div class="p-3 mb-3" style="max-width: 18rem;">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="ms-2 c-details">
+                        </div>
+                            </div>
+                                </div>
+                <div class="mt-5">
+                    <h3 class="heading">${manager.name}</h3>
+                    <h4>Manager</h4><i class="material-icons">content_paste</i>
+                    <div class="mt-5">
+                        <div class="progress">
+                        </div>
+                        <div class="mt-3"> <span class="text1">Employee ID: ${manager.id}</span></div>
+                        <span class="text2">Office #: ${manager.officeNumber}</span>
+                        <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>    
     `;
 }
 
 // Engineer class generator
 const generateEngineer = function (engineer) {
     return `
-    <! -- <div class ="col-md-4 col-4 mt-4">
-        <div class="card h-100">
-            <div class="card-header">
-                <h3>${engineer.name}</h3>
-                <h4>Engineer</h4><i class="material-icons">content_paste</i>
-            </div>
-            <div class="card-body">
-                <p class="id">ID: ${engineer.id}</p>
-                <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-                <p class="github">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+<div class="container mt-5 mb-3" id="border">
+    <div class="row">
+        <div class="card col-md-4">
+            <div class="p-3 mb-3" style="max-width: 18rem;">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="ms-2 c-details">
+                        </div>
+                            </div>
+                                </div>
+                <div class="mt-5">
+                    <h3 class="heading">${engineer.name}</h3>
+                    <h4>Engineer</h4><i class="material-icons">content_paste</i>
+                    <div class="mt-5">
+                        <div class="progress">
+                        </div>
+                        <div class="mt-3"> <span class="text1">Employee ID: ${engineer.id}</span></div>
+                        <span class="text2">Github: <a href="https://github.com/${engineer.github}"></a></span>
+                        <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    `;
+</div>
+`;
 }
 
 const generateIntern = function (intern) {
     return `
-    <div class ="col-md-4 col-4 mb-4">
-        <div class="card h-100">
-            <div class="card-header">
-                <h3>${intern.name}</h3>
-                <h4>Intern</h4><i class="material-icons">content_paste</i>
-            </div>
-            <div class="card-body">
-                <p class="id">ID: ${intern.id}</p>
-                <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
-                <p class="school">School: ${intern.school}</p>
+<div class="container mt-5 mb-3" id="border">
+    <div class="row">
+        <div class="card col-md-4">
+            <div class="p-3 mb-3" style="max-width: 18rem;">
+                <div class="d-flex justify-content-between">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="ms-2 c-details">
+                        </div>
+                            </div>
+                                </div>
+                <div class="mt-5">
+                    <h3 class="heading">${intern.name}</h3>
+                    <h4>Intern</h4><i class="material-icons">content_paste</i>
+                    <div class="mt-5">
+                        <div class="progress">
+                        </div>
+                        <div class="mt-3"> <span class="text1">Employee ID: ${intern.id}</span></div>
+                        <span class="text2">School: ${intern.school}</span>
+                        <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div> -->
+    </div>
+</div>
     `;
 }
 
@@ -141,3 +177,49 @@ const generateTeamPortfolio = function (employeeSections) {
 };
 
 module.exports = generateHTML;
+
+// Old styling
+// Saving here to refer back to as the styling is changed
+
+
+{/* <div class ="col-md-4 col-sm-6 mt-4">
+        <div class="card h-100">
+            <div class="card-header">
+                <h3>${manager.name}</h3>
+                <h4>Manager</h4><i class="material-icons">content_paste</i>
+            </div>
+            <div class="card-body">
+                <p class="id">ID: ${manager.id}</p>
+                <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
+                <p class="office">Office Number: ${manager.officeNumber}</p>
+            </div>
+        </div>
+</div> */}
+
+// <! -- <div class ="col-md-4 col-4 mt-4">
+//         <div class="card h-100">
+//             <div class="card-header">
+//                 <h3>${engineer.name}</h3>
+//                 <h4>Engineer</h4><i class="material-icons">content_paste</i>
+//             </div>
+//             <div class="card-body">
+//                 <p class="id">ID: ${engineer.id}</p>
+//                 <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+//                 <p class="github">Github: <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
+//             </div>
+//         </div>
+//     </div>
+
+{/* <div class ="col-md-4 col-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header">
+                <h3>${intern.name}</h3>
+                <h4>Intern</h4><i class="material-icons">content_paste</i>
+            </div>
+            <div class="card-body">
+                <p class="id">ID: ${intern.id}</p>
+                <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+                <p class="school">School: ${intern.school}</p>
+            </div>
+        </div>
+    </div> --> */}
