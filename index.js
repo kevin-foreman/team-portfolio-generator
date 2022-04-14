@@ -1,6 +1,5 @@
 // Need all the dependencies here
 const inquirer = require('inquirer');
-// const Employee = require('./Employee');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -124,7 +123,7 @@ const addEmployee = () => {
         {
             type: 'input',
             name: 'id',
-            message: "Enter the employee's ID number",
+            message: "Enter the employee's ID number (numbers only)",
             validate: nameInput => {
                 // Using NaN again
                 if (isNaN(nameInput)) {
@@ -165,7 +164,7 @@ const addEmployee = () => {
         },
         {
             type: 'input',
-            name: 'school',
+            name: 'currentSchool',
             message: "Enter the intern's school",
             when: (input) => input.role === "Intern",
             validate: nameInput => {
@@ -173,9 +172,11 @@ const addEmployee = () => {
                     return true;
                 } else {
                     console.log("Intern's school is required")
+                    return false;
                 }
-            }
+            } 
         },
+        
 
         {
             type: 'confirm',
