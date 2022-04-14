@@ -189,7 +189,7 @@ const addEmployee = () => {
     // after all the information has been captured, get captured information into the empty array
     .then(employeeData => {
 
-        const { name, id, email, role, github, school, confirmAddEmployee } = employeeData;
+        const { name, id, email, role, github, currentSchool, confirmAddEmployee } = employeeData;
         let employee;
 
         if (role === "Engineer") {
@@ -198,7 +198,7 @@ const addEmployee = () => {
             console.log(Engineer);
 
         } else if (role === "Intern") {
-            employee = new Intern (name, id, email, school);
+            employee = new Intern (name, id, email, currentSchool);
             console.log(Intern);
         }
 
