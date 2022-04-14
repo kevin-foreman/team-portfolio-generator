@@ -205,7 +205,7 @@ const addEmployee = () => {
 };
 
 // Write the captured data to an html file
-// send it to the same file as the css so the link to the styling works
+// send it to the same file location as the css so the link to the styling works
 
 
 const writeFile = data => {
