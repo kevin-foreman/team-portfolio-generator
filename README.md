@@ -38,7 +38,7 @@ kevin.o.foreman2@gmail.com / kevin-foreman (GitHub)
 
 ## License
 
-The license used for this project is MIT
+The license used for this project is the GNU Affero General Public License.
 
 Link to demonstration video: www.googledrivevideo.com
 
