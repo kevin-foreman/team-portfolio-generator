@@ -17,7 +17,7 @@ Simple Command Line Interface (CLI) designed for small businesses which allows t
 * [License](#license) 
 
 ## Installation
-First install and initialize Node Package Manager (NPM) with "NPM init. Next, install the inquirer module with "node i inquirer." After that, if successfully installed the user can initialize the application with "node index.js."
+First install and initialize Node Package Manager (NPM) with "npm init. Next, install the inquirer module with "node i inquirer." After that, if successfully installed the user can initialize the application with "node index.js." If you want to enable the testing feature with Jest, you will also need to install it with "npm i jest."
 
 ## Usage
 This application is geared toward small business owners who want to have 'at-a-glance' information about their team's members. Information pertinent to the type of employee such as the GitHub repository of their engineers, and email addresses for all the employees will be clickable, and take the user immediately to that resource in either a new browser tab, or open the user's default mail client to quickly email their team members.
