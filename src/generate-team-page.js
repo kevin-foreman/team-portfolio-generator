@@ -9,17 +9,15 @@
     return `
 <div class="row">                
     <div class="" id="border">
-        <div class="">
+        <div class="row">
             <div class="card" style="margin: 20px;">
                 <div class="" style="max-width: 18rem;">        
                     <div class="mt-5" style="margin: 5px;">
                         <h3 class="heading">${manager.name}</h3>
                         <h4>Role: ${manager.role}</h4><i class="material-icons">content_paste</i>
-                        <div class="">
                             <div class="mt-3"> <span class="text1">Employee ID: ${manager.id}</span></div>
                             <span class="text2">Office #: ${manager.officeNumber}</span>
                             <p class="email">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -31,14 +29,13 @@
 // Engineer class generator
 const generateEngineer = function (engineer) {
     return `
-<div class="container mt-5 mb-3" id="border">
+<div class="" id="border">
     <div class="row">
         <div class="card" style="margin: 20px;">
             <div class="p-3 mb-3" style="max-width: 18rem;">
                 <div class="mt-5" style="margin: 5px;">
                     <h3 class="heading">${engineer.name}</h3>
                     <h4>Role: ${engineer.role}</h4><i class="material-icons">logo_dev</i>
-                    <div class="mt-5">
                         <div class="mt-3"> <span class="text1">Employee ID: ${engineer.id}</span></div>
                         <span class="text2">Github: <a href='https://github.com/${engineer.github}' target="_blank">${engineer.github}</a></span>
                         <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
@@ -47,24 +44,21 @@ const generateEngineer = function (engineer) {
             </div>
         </div>
     </div>
-</div>
 `;
 }
 
 const generateIntern = function (intern) {
     return `
-<div class="container mt-5 mb-3" id="border">
+<div class="" id="border">
     <div class="row">
         <div class="card" style="margin: 20px;">
             <div class="p-3 mb-3" style="max-width: 18rem;">
                 <div class="mt-5" style="margin: 5px;">
                     <h3 class="heading">${intern.name}</h3>
                     <h4>Role: ${intern.role}</h4><i class="material-icons">supervised_user_circle</i>
-                    <div class="mt-5">
                         <div class="mt-3"> <span class="text1">Employee ID: ${intern.id}</span></div>
                         <span class="text2">School: ${intern.school}</span>
                         <p class="email">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
-                    </div>
                 </div>
             </div>
         </div>
