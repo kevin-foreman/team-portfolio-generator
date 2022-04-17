@@ -24,10 +24,10 @@ This application is geared toward small business owners who want to have 'at-a-g
 
 To use this application follow the installation instructions above, and initialize the application on the command line with "node index.js." 
 
-An example screenshot is added below to show the output.
+An example screenshot is added below to show the output, and a sample html file generated with this application is in the root directory.
 
 ## Technologies
-JavaScript, Node.js, inquirer.js
+JavaScript, Node.js, inquirer.js, jest.js, html, css, bootstrap 
 
 ## Tests
 Tested positive generation of employee classes with Jest.
