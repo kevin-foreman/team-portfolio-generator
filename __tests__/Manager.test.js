@@ -12,13 +12,13 @@ const { expect } = require('@jest/globals');
 
 
 test('getOfficeNumber() returns officeNumber from user provided value', () => {
-    const manager = new Manager('Steve');
+    const manager = new Manager('Steve', 4567, 'mail@mail.mail', 'Manager', '555-5555');
 
-    expect(manager.getOfficeNumber()).toEqual(expect.any(Object));
+    expect(manager.getOfficeNumber()).toEqual(expect.any(String));
 });
 
 test("getRole() returns 'Manager' ", () => {
-    const manager = new Manager('Steve');
+    const manager = new Manager('Steve', 4567, 'mail@mail.mail', 'Manager', '555-5555');
     
-    expect(manager.getRole()).toEqual(expect.any(Object));
+    expect(manager.getRole()).toEqual(expect.any(String));
 });
