@@ -40,7 +40,7 @@ kevin.o.foreman2@gmail.com / kevin-foreman (GitHub)
 
 The license used for this project is the GNU Affero General Public License.
 
-Link to demonstration video: www.googledrivevideo.com
+Link to demonstration video: https://drive.google.com/file/d/1h5Mah2TCu2KpB9bKh8ffZ9N8j_jBYIsW/view
 
 ![alt text](assets/images/team-screenshot.png)
 
