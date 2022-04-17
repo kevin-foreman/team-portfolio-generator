@@ -15,6 +15,11 @@ body {
     background-color: var(--primary);
     color: var(--secondary);
     font-size: 50px;
+    border-radius: 10px;
+}
+
+#navbar-text {
+    margin-left: 25%;
 }
 
 #border {
